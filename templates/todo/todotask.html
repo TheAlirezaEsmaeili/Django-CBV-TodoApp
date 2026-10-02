@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>To Do List</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="add a new">
+    <input type="submit" value="send" >
+  </form>
+  {% for task in tasks %}
+    <p>{{ task.title }}</p>
+  {% endfor %}
+</body>
+</html>
