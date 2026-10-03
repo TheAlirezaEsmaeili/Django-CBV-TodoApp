@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      background-color: aquamarine;
+    }
+
+    a{
+      text-decoration: none;
+      float: right;
+      color: black;
+    }
+  </style>
+
 </head>
+
 <body>
   <h1>To Do List</h1>
-  <form method="POST">
+  <form method="POST" class="c1">
     {% csrf_token %}
     <input type="text" name="title" placeholder="add a new">
-    <input type="submit" value="send" >
+    <input type="submit" value="send">
   </form>
   {% for task in tasks %}
-    <p>{{ task.title }}</p>
+  <p>
+    {{ task.title }}
+    <a href="{% url 'todoapp:task_delete' pk=task.id %}"><i class="fa-solid fa-trash"></i></a>
+  </p>
   {% endfor %}
 </body>
+
 </html>

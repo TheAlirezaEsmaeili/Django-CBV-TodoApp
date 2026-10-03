@@ -8,6 +8,7 @@ class TodoTask(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     complete = models.BooleanField(default=False)
+    #id = models.ForeignKey(on_delete=models.CASCADE,null=True,blank=True)
 
     def __str__(self):
         return self.title
