@@ -1,0 +1,9 @@
+[33mcommit d874bab580295f5ee566633ad222c9e6123296eb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author:     AliRez4 <alirez4.web@gmail.com>
+AuthorDate: Sat Oct 3 23:31:00 2026 +0330
+Commit:     AliRez4 <alirez4.web@gmail.com>
+CommitDate: Sat Oct 3 23:31:00 2026 +0330
+
+    Build Todo CRUD and Delete Confirmation
+    
+    Implemented the core Todo List functionality using Django Class-Based Views, including task creation, task listing, task deletion, and a delete confirmation page. UI styling and minor refinements are still in progress.
